@@ -2,17 +2,15 @@
 <html lang="{{ site.lang | default: "en-US" }}">
 <!-- Site hosted on github pages, style derived from orderedlist's minimal theme -->
   <head>
-    {% if page.layout == 'post' %}
-        <title>{{ page.title }} - {{ site.title }}</title>
+    <title>{{ page.title }} - {{ site.title }}</title>
 
+    {% if page.layout == 'post' %}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="{{ site.author.twitter }}" />
         <meta name="twitter:title" content="{{ page.title }}" />
         <meta name="twitter:description" content="{{ page.excerpt | markdownify }}" />
         <meta name="twitter:image" content="{{ "/NoGA.jpg" | absolute_url }}" />
         <meta name="twitter:image:alt" content='"Surveillance" by Jonathan McIntosh' />
-    {% else %}
-        <title>{{ site.title }}</title>
     {% endif %}
 
     <meta charset="UTF-8" />
